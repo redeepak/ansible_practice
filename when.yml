@@ -1,23 +1,29 @@
 ---
-- hosts: all
+- hosts: group2
   become: yes
   tasks:
   - name: i want to install web server only on ubuntu
     apt:
-      name: apache2
+      name: {{mywebserver}}
       state: present
 
     when: ansible_os_family=="Debian"
 
   - name: i want to install web server only on redhat
     yum:
-      name: httpd
+      name: {{mywebserver}}
       state: present
     when: ansible_os_family=="RedHat"
 
   - name: start the sevice
     service:
-      name: httpd
+      name: {{mywebserver}}
       state: started
     when: ansible_os_family=="RedHat"
+
+  - name: start the sevice
+    service:
+      name: {{mywebserver}}
+      state: started
+    when: ansible_os_family=="Debian"
 
