@@ -10,4 +10,4 @@
     debug:
         msg: "{{ myvar1 }}"
 
-    ignore-error: yes
+    #ignore-error: yes
