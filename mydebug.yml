@@ -1,0 +1,11 @@
+---
+- hosts: mywebservers
+  become: yes
+  tasks:
+  - name: i wanna to execute linux command
+    command: hostname -f
+    register: myresult
+
+  - name: i wanna display my first task result
+    debug:
+      msg: "{{myresult}}"
