@@ -1,2 +1,10 @@
+[groupone]
 172.31.4.159
 172.31.34.0
+
+[grouptwo]
+172.31.2.70
+
+
+[grouptwo:vars]
+mywebserver= apache2
