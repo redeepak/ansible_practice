@@ -1,0 +1,13 @@
+---
+- hosts: mywebservers
+  become: yes
+  tasks:
+  - name: install git, tree, wget in loop
+    apt:
+      name: "{{item}}"
+      state: present
+    loop:
+    - git
+    - tree
+    - wget
+    
