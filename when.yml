@@ -4,26 +4,26 @@
   tasks:
   - name: i want to install web server only on ubuntu
     apt:
-      name: {{mywebserver}}
+      name: "{{mywebserver}}"
       state: present
 
     when: ansible_os_family=="Debian"
 
   - name: i want to install web server only on redhat
     yum:
-      name: {{mywebserver}}
+      name: "{{mywebserver}}"
       state: present
     when: ansible_os_family=="RedHat"
 
   - name: start the sevice
     service:
-      name: {{mywebserver}}
+      name: "{{mywebserver}}"
       state: started
     when: ansible_os_family=="RedHat"
 
   - name: start the sevice
     service:
-      name: {{mywebserver}}
+      name: "{{mywebserver}}"
       state: started
     when: ansible_os_family=="Debian"
 
