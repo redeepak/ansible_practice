@@ -1,5 +1,5 @@
 ---
-- hosts: group2
+- hosts: 172.31.2.70
   become: yes
   tasks:
   - name: i want to install web server only on ubuntu
