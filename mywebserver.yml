@@ -9,5 +9,4 @@
   - name: i want to play with services
     apt:
       name: apache2
-      satate: started
-      
+      state: started
