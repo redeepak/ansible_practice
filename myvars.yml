@@ -1,0 +1,16 @@
+---
+- hosts: mywebservers
+  become: yes
+  vars:
+    myvar1: git
+    myvar2: wget
+    myvar3: tree
+
+  tasks:
+  - name: i want to display myvars
+    apt:
+      name: myvar2
+    debug:
+      msg: {{myvar2}}
+
+    ignore-error: yes
