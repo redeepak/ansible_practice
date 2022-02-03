@@ -11,6 +11,6 @@
     apt:
       name: myvar2
     debug:
-      msg: {{myvar2}}
+      msg: "{{myvar2}}"
 
     ignore-error: yes
