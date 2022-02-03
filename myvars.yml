@@ -1,16 +1,13 @@
 ---
-- hosts: mywebservers
+- hosts: 172.31.8.215
   become: yes
-  vars:
-    myvar1: git
-    myvar2: wget
-    myvar3: tree
-
+  vars: 
+     myvar1: git
+     myvar2: tree
+     myvar3: wget
   tasks:
-  - name: i want to display myvars
-    apt:
-      name: myvar2
+  - name: i want to display myvar1
     debug:
-      msg: "{{myvar2}}"
+        msg: "{{ myvar1 }}"
 
     ignore-error: yes
